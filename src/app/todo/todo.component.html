@@ -1,3 +1,16 @@
-<main>
-  <input class="todo-input" placeholder="Add todos" />
+<main class="todo-container">
+  <input
+    class="todo-input"
+    type="text"
+    placeholder="Enter a todo"
+    [value]="newTodo()"
+    (input)="newTodo.set($any($event.target).value)"
+  />
+  <button class="todo-button" (click)="addTodo()">Add</button>
+
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos(); let i = index" class="todo-item">
+      {{ todo }}
+    </li>
+  </ul>
 </main>

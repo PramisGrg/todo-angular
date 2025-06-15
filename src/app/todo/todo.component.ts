@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 @Component({
@@ -5,6 +6,7 @@ import { Component, signal } from '@angular/core';
   standalone: true,
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css'],
+  imports: [CommonModule],
 })
 export class Todo {
   newTodo = signal('');
@@ -14,6 +16,7 @@ export class Todo {
     const value = this.newTodo().trim();
     if (value) {
       this.todos.update((todos) => [...todos, value]);
+      this.newTodo.set('');
     }
   }
 }
