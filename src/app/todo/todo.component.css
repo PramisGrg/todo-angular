@@ -1,3 +1,15 @@
+.todo-container {
+  padding-top: 10px;
+}
+
+.todo-subcontainer {
+  display: flex;
+}
+
+.todo-list {
+  list-style: none;
+}
+
 .todo-input {
   padding: 0.5rem 1rem;
   width: 100%;
@@ -22,4 +34,12 @@
   cursor: pointer;
   font-size: 16px;
   margin-left: 16px;
+}
+
+.delete-button {
+  padding: 2px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 2px;
 }
